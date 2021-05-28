@@ -12,14 +12,7 @@ API_SECRET = os.environ.get("API_SECRET")
 
 # Initializing client
 client = Client(API_KEY, API_SECRET)
-
-# # Grabbing current price info
-# eth_price = float(client.get_buy_price(currency_pair="ETH-USD")["amount"])
-# ltc_price = float(client.get_buy_price(currency_pair="LTC-USD")["amount"])
-# algo_price = float(client.get_buy_price(currency_pair="ALGO-USD")["amount"])
-# ada_price = float(client.get_buy_price(currency_pair="ADA-USD")["amount"])
-# print(eth_price, ltc_price, algo_price, ada_price)
-
+# Reading in transaction history
 history_df = pd.read_csv("transaction_history.csv", skiprows=7)
 
 
